@@ -1,11 +1,33 @@
 import React from 'react';
 import './App.css';
-import Homescreen from './Homescreen';
+import Homescreen from './screens/HomeScreen';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
+import LoginScreen from './screens/LoginScreen';
 
 function App() {
+
+  const user = null;
+
   return (
     <div className="app">
-      <Homescreen />
+
+      <Router>
+        
+        {!user ? (
+          <LoginScreen />
+        ) : (
+        <Switch>
+          <Route path="/">
+            <Homescreen />
+          </Route>
+        </Switch>
+        )}
+        
+      </Router>
     </div>
   );
 }
