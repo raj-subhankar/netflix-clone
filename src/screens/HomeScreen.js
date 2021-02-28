@@ -5,7 +5,7 @@ import Nav from '../Nav'
 import requests from '../Requests'
 import Row from '../Row'
 
-function Homescreen() {
+function HomeScreen() {
     return(
         <div className='homescreen'>
             <Nav />
@@ -47,4 +47,4 @@ function Homescreen() {
     )
 }
 
-export default Homescreen
+export default HomeScreen
